@@ -337,6 +337,7 @@ footer a {
     padding: 15px;
     align-items: flex-end;
     position: relative;
+    overflow: hidden;
 }
 
 .trainer-img::after {
@@ -347,6 +348,16 @@ footer a {
     position: absolute;
     top: 0;
     left: 0;
+    opacity: 0;
+    transition: 0.5s;
+}
+
+.trainer:hover {
+    opacity: 1;
+}
+
+.trainer:hover .trainer-img h3, .trainer:hover .trainer-img h4 {
+    top: 0px;
 }
 
 .trainer-img h3 {
@@ -354,12 +365,14 @@ footer a {
     z-index: 1;
     font-size: 28px;
     margin-bottom: 5px;
+    top: 200px;
 }
 
 .trainer-img h4 {
     position: relative;
     z-index: 1;
     font-size: 22px;
+    top: 200px;
 }
 
 .trainer-1 {
@@ -400,10 +413,6 @@ footer a {
 
 .trainer-bio p {
     font-size: 17px;
-}
-
-.service-grid-container {
-    display: grid;
 }
 
 .service-grid-container {
